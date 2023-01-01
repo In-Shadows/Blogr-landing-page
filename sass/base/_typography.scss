@@ -1,0 +1,39 @@
+.primary-heading {
+  font-size: 6rem;
+  color: $color-white;
+  font-weight: 600;
+  padding: 0 2rem;
+  line-height: 1.2;
+
+  @media only screen and(max-width: $bp-small) {
+    font-size: 5.4rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 3.6rem;
+  }
+}
+
+//FEATURES
+.secondary-heading {
+  font-size: 3.6rem;
+  color: $color-very-dark-blue;
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 3rem;
+    padding: 0 1rem;
+  }
+}
+
+.tertiary-heading {
+  font-size: 2.6rem;
+  color: $color-very-dark-blue;
+  margin-bottom: 2rem;
+}
+
+.tertiary-text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: rgba($color-very-dark-grayish-blue, 0.7);
+  font-weight: 600;
+}

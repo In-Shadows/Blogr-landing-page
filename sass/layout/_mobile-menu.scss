@@ -1,0 +1,139 @@
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 3%;
+  background-color: $color-white;
+  width: 34rem;
+  height: 0;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(#000, 0.5);
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+
+  &.active {
+    height: 40rem;
+    padding: 4rem;
+  }
+
+  &:has(&__dropdown.active-dd) {
+    height: 60rem;
+  }
+
+  &__icon {
+    cursor: pointer;
+    display: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  &__navigation {
+    border-bottom: 1px solid $color-grayish-blue;
+  }
+
+  &__navigation__list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.5s;
+
+    &-item {
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+  }
+
+  &__navigation__list-item:hover,
+  &__navigation__list-item:active {
+    opacity: 0.7;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: $color-very-dark-blue;
+    font-weight: 600;
+  }
+
+  &__dropdown {
+    background-color: rgba($color-grayish-blue, 0.4);
+    width: 28rem;
+    border-radius: 5px;
+    opacity: 0.8;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    //INITIAL STATE
+    height: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    position: absolute;
+    top: 30%;
+    right: 10%;
+
+    & > * {
+      font-size: 1.8rem;
+      color: $color-very-dark-blue;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  &__dropdown.active-dd {
+    padding: 3rem;
+    height: min-content;
+  }
+
+  &:has(&__dropdown.active-dd) &__navigation__list {
+    margin-bottom: 22rem;
+  }
+}
+
+//MOBILE BUTTONS
+.mobile__btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  .mobile__btn:link,
+  .mobile-menu:visited {
+    font-family: $font-overpass;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .btn--s-m {
+    background-image: linear-gradient(
+      to right,
+      $color-very-light-red-gradient,
+      $color-light-red-gradient
+    );
+    color: $color-white;
+    padding: 1.5rem 4rem;
+  }
+}
+
+.mobile-menu__connect img {
+  transition: all 0.5s;
+}
+
+.mobile-menu__connect.active img {
+  transform: rotate(180deg);
+}

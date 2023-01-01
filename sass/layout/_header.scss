@@ -1,0 +1,137 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 4rem;
+
+  display: flex;
+  align-items: center;
+
+  .logo {
+    margin-right: 6rem;
+  }
+
+  .nav-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+  }
+
+  &__navigation {
+    margin-right: auto;
+
+    @media only screen and(max-width: $bp-medium) {
+      // display: none;
+    }
+  }
+
+  &__navigation-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      cursor: pointer;
+    }
+  }
+
+  &__navigation-list-item img {
+    transition: all 0.5s;
+  }
+
+  &__navigation-list-item.active img {
+    transform: rotate(180deg);
+  }
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: $color-white;
+    position: relative;
+  }
+
+  &__link::after {
+    content: '';
+    display: inline-block;
+    background-color: $color-white;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    transition: all 0.3s;
+    opacity: 0;
+  }
+
+  &__link:hover::after,
+  &__link:active::after {
+    opacity: 1;
+  }
+
+  &__btn {
+    color: $color-white;
+  }
+
+  .btn--s-h {
+    padding: 1rem 4rem;
+  }
+}
+
+//DROPDOWN
+.connect {
+  position: relative;
+
+  &-dropdown {
+    position: absolute;
+    top: 200%;
+    left: -40%;
+    background-color: $color-white;
+    width: 18rem;
+    height: 0;
+    border-radius: 8px;
+    transition: all 0.4s;
+    overflow: hidden;
+    padding: 0;
+
+    ul {
+      list-style: none;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    a:link,
+    a:visited {
+      font-family: $font-ubuntu;
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: $color-very-dark-grayish-blue;
+      transition: all 0.3s;
+    }
+
+    a:hover,
+    a:active {
+      font-weight: 700;
+    }
+  }
+
+  &.active &-dropdown {
+    height: 15rem;
+    padding: 2.5rem;
+  }
+}

@@ -1,0 +1,60 @@
+.footer {
+  height: min-content;
+  border-top-right-radius: 150px;
+  background-color: $color-very-dark-black-blue;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: start;
+  gap: 6rem;
+  padding: 7rem;
+
+  &__logo-container {
+    justify-self: center;
+
+    @media only screen and(max-width: $bp-large) {
+      grid-row: 1 / span 2;
+    }
+
+    @media only screen and(max-width: $bp-medium) {
+      grid-row: 1 / span 3;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      grid-row: 1 / span 1;
+    }
+  }
+
+  .context {
+    @media only screen and(max-width: $bp-small) {
+      text-align: center;
+    }
+
+    &__name {
+      font-size: 1.7rem;
+      color: $color-white;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__navigation__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    font-family: $font-ubuntu;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: rgba($color-white, 0.7);
+  }
+
+  &__link:hover,
+  &__link:active {
+    border-bottom: 2px solid $color-white;
+  }
+}

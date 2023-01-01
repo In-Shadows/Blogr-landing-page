@@ -1,0 +1,80 @@
+.features {
+  overflow: hidden;
+
+  // grid-template-rows: 110vh;
+  position: relative;
+  margin-bottom: 15rem;
+
+  &__grid {
+    row-gap: 5rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  @media only screen and(max-width: $bp-large) {
+    margin-bottom: 25rem;
+  }
+
+  @media only screen and(max-width: $bp-small) {
+    margin-bottom: 25rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns: 1fr;
+  }
+
+  &__heading {
+    text-align: center;
+    transform: translateY(10rem);
+
+    @media only screen and(max-width: $bp-largest) {
+      transform: translateY(0);
+    }
+
+    @media only screen and(max-width: $bp-large) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__boxes {
+    padding: 0 3rem 0 21rem;
+
+    align-self: center;
+    justify-self: center;
+
+    @media only screen and(max-width: $bp-largest) {
+      padding: 0 8rem 0 16rem;
+    }
+
+    @media only screen and(max-width: $bp-large) {
+      text-align: center;
+      padding: 0 5rem;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      padding: 0 3rem;
+    }
+  }
+
+  &__img {
+    @media only screen and(max-width: $bp-large) {
+      grid-row: 1;
+    }
+
+    img {
+      transform: translateX(3.5%);
+      height: 100%;
+      object-fit: cover;
+
+      @media only screen and(max-width: $bp-largest) {
+        transform: translateX(0);
+      }
+
+      @media only screen and(max-width: $bp-large) {
+        width: 100%;
+      }
+    }
+  }
+}

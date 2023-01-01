@@ -1,0 +1,60 @@
+// PRIMARY COLORS
+$color-light-red: #ff525d; // CTA TEXT
+$color-very-light-red: #ff7a85; // CTA HOVER BACKGROUND
+$color-very-dark-blue: #1f3f5b; // HEADINGS
+
+// NEUTRAL COLORS
+$color-white: #fff; // TEXT
+$color-grayish-blue: #c8c8cb; // FOOTER TEXT
+$color-very-dark-grayish-blue: #4b5862; // BODY COPY
+$color-very-dark-black-blue: #25252d; // FOOTER BACKGROUND
+
+// GRADIENT
+// BACKGROUND GRADIENT - INTRO/CTA MOBILE NAV
+$color-very-light-red-gradient: #ff8f70;
+$color-light-red-gradient: #ff3d54;
+
+// BACKGROUND GRADIENT BODY
+$color-very-dark-gray-blue-gradient: #2c2d3f;
+$color-very-dark-desaturated-blue-gradient: #3f4164;
+
+// FONTS
+$font-overpass: 'Overpass', sans-serif; // 300 600
+$font-ubuntu: 'Ubuntu', sans-serif; // 400 500 700
+
+//BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 65.625em; // 1050px
+$bp-medium: 53.125em; // 850px
+$bp-small: 40.625em; // 650px
+$bp-smallest: 34.375em; // 550px
+
+//GLOBAL RESET
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  // @media only screen and (max-width: $bp-large) {
+  //   font-size: 56.25%;
+  // }
+}
+
+body {
+  font-family: $font-overpass;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+//HIDDEN CLASS
+.hidden {
+  display: none;
+}

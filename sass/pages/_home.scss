@@ -1,0 +1,179 @@
+.hero-section {
+  background-image: url(../images/bg-pattern-intro-desktop.svg),
+    linear-gradient(
+      to right,
+      rgba($color-very-light-red-gradient, 0.92),
+      rgba($color-light-red-gradient, 0.92)
+    );
+
+  background-size: 200%;
+  background-position: 20%;
+  background-repeat: no-repeat;
+
+  height: 80vh;
+
+  border-bottom-left-radius: 100px;
+
+  @media only screen and (max-width: $bp-smallest) {
+    background-image: url(../images/bg-pattern-intro-mobile.svg),
+      linear-gradient(
+        to right,
+        rgba($color-very-light-red-gradient, 0.92),
+        rgba($color-light-red-gradient, 0.92)
+      );
+
+    background-size: 350%;
+    background-position-y: 40%;
+    background-position-x: 35%;
+  }
+
+  &__description {
+    height: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 22rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding-top: 18rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    color: $color-white;
+    font-weight: 300;
+    margin-bottom: 6rem;
+    padding: 2rem 3rem 0 3rem;
+  }
+}
+
+//STATE OF THE ART INFRASTRUCTURE
+.state {
+  background-image: url('../images/bg-pattern-circles.svg'),
+    linear-gradient(
+      to right,
+      $color-very-dark-gray-blue-gradient,
+      $color-very-dark-desaturated-blue-gradient
+    );
+
+  background-repeat: no-repeat;
+  background-position-x: -42.2%;
+  background-position-y: 80%;
+
+  grid-template-rows: 45rem;
+  justify-items: center;
+  align-items: center;
+
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+
+  @media only screen and(max-width: $bp-medium) {
+    background-position-x: 30%;
+    background-position-y: bottom;
+  }
+
+  @media only screen and(max-width: $bp-small) {
+    grid-template-columns: 1fr;
+  }
+
+  @media only screen and (max-width: 450px) {
+    background-size: 195%;
+    background-position-x: 40%;
+    background-position-y: 500%;
+  }
+
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.4) translateY(12px);
+
+    @media only screen and(max-width: $bp-large) {
+      transform: scale(1.4) translateY(-3rem);
+    }
+
+    @media only screen and(max-width: $bp-small) {
+      transform: scale(0.9) translateY(-20rem);
+    }
+
+    @media only screen and(max-width: 450px) {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    padding: 0 20rem 0 5rem;
+
+    @media only screen and(max-width: $bp-largest) {
+      padding: 0 15rem 0 10rem;
+    }
+
+    @media only screen and(max-width: $bp-large) {
+      padding: 0 10rem 3rem 10rem;
+      text-align: center;
+    }
+
+    @media only screen and(max-width: $bp-small) {
+      margin-top: -20rem;
+      margin-bottom: 5rem;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      padding: 0 4rem 5rem;
+    }
+  }
+
+  &__heading {
+    font-size: 3.6rem;
+    color: $color-white;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: rgba($color-white, 0.9);
+    line-height: 1.8;
+  }
+}
+
+//ADVANTAGES
+.advantages {
+  row-gap: 3rem;
+
+  @media only screen and(max-width: $bp-smallest) {
+    grid-template-columns: 1fr;
+  }
+
+  &__img {
+    img {
+      transform: translateX(-29%);
+
+      @media only screen and(max-width: $bp-large) {
+        transform: translateX(0);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__boxes {
+    justify-self: center;
+    align-self: center;
+    padding: 0 18rem 0 6rem;
+
+    @media only screen and(max-width: $bp-largest) {
+      padding: 0 12rem;
+    }
+
+    @media only screen and(max-width: $bp-large) {
+      text-align: center;
+      padding: 0 5rem;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      padding: 0 2.5rem;
+    }
+  }
+}

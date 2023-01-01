@@ -1,0 +1,49 @@
+.btn:link,
+.btn:visited {
+  font-size: 1.8rem;
+  font-family: $font-ubuntu;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 1.5rem 3rem;
+  border-radius: 100px;
+  transition: all 0.2s;
+  border: none;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 1.6rem;
+  }
+}
+
+.btn:focus {
+  outline: none;
+  //   box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+  // box-shadow: 0 0 0 0.8rem rgba(#000, 0.2);
+}
+
+.btn--s:link,
+.btn--s:visited {
+  color: $color-light-red;
+  background-color: $color-white;
+
+  @media only screen and (max-width: 450px) {
+    padding: 1.5rem 2rem;
+  }
+}
+
+.btn--s:hover,
+.btn--s:active {
+  background-color: $color-very-light-red;
+  color: $color-white;
+}
+
+.btn--lm:link,
+.btn--lm:visited {
+  color: $color-white;
+  outline: 1px solid $color-white;
+}
+
+.btn--lm:hover,
+.btn--lm:active {
+  color: $color-light-red;
+  background-color: $color-white;
+}
